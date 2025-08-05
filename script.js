@@ -3,11 +3,6 @@ const questions = [
         sentence: "The sky is ____ during the day.",
         correct: "blue",
         options: ["green", "blue", "black", "red"]
-    },
-    {
-        sentence: "Birds can ____ in the sky.",
-        correct: "fly",
-        options: ["walk", "run", "fly", "jump"]
     }
 ];
 
@@ -22,6 +17,11 @@ function disableOptions() {
 
 function loadQuestion() {
     const q = questions[current];
+    const nextButton = document.getElementById("next");
+    
+    // Disable the next button until the correct answer is chosen
+    nextButton.disabled = true;
+
     document.getElementById("feedback").textContent = "";
     document.getElementById("question").innerHTML = q.sentence.replace("____", "_____");
     const optionsDiv = document.getElementById("options");
@@ -37,10 +37,11 @@ function loadQuestion() {
                 btn.classList.add("correct");
                 document.getElementById("feedback").textContent = "✅ Correct!";
                 disableOptions();
+                nextButton.disabled = false; // Enable the next button
             } else {
                 btn.classList.add("incorrect");
                 document.getElementById("feedback").textContent = "❌ Wrong. Try again.";
-                btn.disabled = true; // Disable only the wrong option
+                btn.disabled = true;
             }
         };
         optionsDiv.appendChild(btn);
@@ -48,8 +49,9 @@ function loadQuestion() {
 }
 
 document.getElementById("next").onclick = () => {
-    current = (current + 1) % questions.length;
-    loadQuestion();
+    // When "Next" is clicked, clear the page and show a congrats message
+    const container = document.querySelector('.container');
+    container.innerHTML = '<h1>Congrats🎉</h1>';
 };
 
 loadQuestion();
