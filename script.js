@@ -27,18 +27,20 @@ function loadQuestion() {
     const optionsDiv = document.getElementById("options");
     optionsDiv.innerHTML = "";
 
-    q.options.forEach(option => {
+    q.options.forEach((option, index) => {
         const btn = document.createElement("button");
         btn.textContent = option;
         btn.classList.add("option-btn");
+        btn.classList.add("option-btn-" + (index + 1));
         btn.onclick = () => {
-            disableOptions();
             if (option === q.correct) {
                 btn.classList.add("correct");
                 document.getElementById("feedback").textContent = "✅ Correct!";
+                disableOptions();
             } else {
                 btn.classList.add("incorrect");
-                document.getElementById("feedback").textContent = "❌ Wrong. The correct answer is " + q.correct;
+                document.getElementById("feedback").textContent = "❌ Wrong. Try again.";
+                btn.disabled = true; // Disable only the wrong option
             }
         };
         optionsDiv.appendChild(btn);
