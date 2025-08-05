@@ -1,10 +1,8 @@
 :root {
-    --bg-color: #E1D9F1;
-    --card-color: #5B4F8C;
-    --primary-color: #8E7DBE;
-    --primary-hover: #7E6DBE;
-    --text-color: #ffffff;
-    --h1-color: #ffffff;
+    --bg-color: #ffffff;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --h1-color: #333333;
     --correct-color: #4CAF50;
     --incorrect-color: #F44336;
 }
@@ -31,7 +29,7 @@ body {
     padding: 40px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -54,8 +52,7 @@ h1 {
 .option-btn {
     display: block;
     width: 100%;
-    background: var(--primary-color);
-    color: var(--text-color);
+    color: #ffffff;
     border: none;
     border-radius: 12px;
     padding: 15px;
@@ -66,8 +63,13 @@ h1 {
     font-weight: 400;
 }
 
+.option-btn-1 { background-color: #4A90E2; }
+.option-btn-2 { background-color: #50E3C2; }
+.option-btn-3 { background-color: #B86EFA; }
+.option-btn-4 { background-color: #FF5E5E; }
+
 .option-btn:hover:not(:disabled) {
-    background: var(--primary-hover);
+    filter: brightness(1.1);
 }
 
 .option-btn:active:not(:disabled) {
@@ -76,12 +78,10 @@ h1 {
 
 .option-btn.correct {
     background: var(--correct-color);
-    color: white;
 }
 
 .option-btn.incorrect {
     background: var(--incorrect-color);
-    color: white;
 }
 
 .option-btn:disabled {
@@ -100,8 +100,8 @@ h1 {
 #next {
     margin-top: 20px;
     padding: 12px 24px;
-    background: var(--primary-color);
-    color: var(--text-color);
+    background: #4A90E2;
+    color: white;
     border: none;
     border-radius: 12px;
     font-size: 1rem;
@@ -111,7 +111,7 @@ h1 {
 }
 
 #next:hover {
-    background: var(--primary-hover);
+    filter: brightness(1.1);
 }
 
 #next:active {
