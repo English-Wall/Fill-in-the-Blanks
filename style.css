@@ -63,10 +63,10 @@ h1 {
     font-weight: 400;
 }
 
-.option-btn-1 { background-color: #4A90E2; }
-.option-btn-2 { background-color: #50E3C2; }
-.option-btn-3 { background-color: #B86EFA; }
-.option-btn-4 { background-color: #FF5E5E; }
+.option-btn-1 { background-color: #D6F7B6; }
+.option-btn-2 { background-color: #F6B6B6; }
+.option-btn-3 { background-color: #B6D7F6; }
+.option-btn-4 { background-color: #FFFFB5; }
 
 .option-btn:hover:not(:disabled) {
     filter: brightness(1.1);
