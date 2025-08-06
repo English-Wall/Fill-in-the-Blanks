@@ -1,8 +1,8 @@
 const questions = [
     {
-        sentence: "The sky is ____ during the day.",
-        correct: "blue",
-        options: ["green", "blue", "black", "red"]
+        sentence: "The _____ should travel from the open position at the Stop Tube to the fully closed position with gravity force alone.",
+        correct: "flappers",
+        options: ["levers", "flappers", "lock wire", "connector"]
     }
 ];
 
