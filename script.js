@@ -51,7 +51,7 @@ document.getElementById("next").onclick = () => {
     // When "Next" is clicked, clear the container and show an image.
     const container = document.querySelector('.container');
     // Replace "path/to/your/image.png" with the correct path to your image file.
-    container.innerHTML = '<img src="flappers.png" alt="Congratulations" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">';
+    container.innerHTML = '<img src="flappers.jpg" alt="Congratulations" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">';
 };
 
 loadQuestion();
