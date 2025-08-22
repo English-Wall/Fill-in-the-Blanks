@@ -1,8 +1,8 @@
 const questions = [
     {
-        sentence: "The _____ should travel from the open position at the Stop Tube to the fully closed position with gravity force alone.",
-        correct: "flappers",
-        options: ["levers", "flappers", "lock wire", "connector"]
+        sentence: "Identify each electrical connector/wire with a label to record its initial position from the inboard or the outboard ______.",
+        correct: "transducer",
+        options: ["transducer", "lock nut", "support", "key tab"]
     }
 ];
 
@@ -51,7 +51,7 @@ document.getElementById("next").onclick = () => {
     // When "Next" is clicked, clear the container and show an image.
     const container = document.querySelector('.container');
     // Replace "path/to/your/image.png" with the correct path to your image file.
-    container.innerHTML = '<img src="flappers.jpg" alt="Congratulations" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">';
+    container.innerHTML = '<img src="transducer.png" alt="Congratulations" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">';
 };
 
 loadQuestion();
