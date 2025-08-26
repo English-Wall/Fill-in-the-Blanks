@@ -1,8 +1,6 @@
 :root {
     --bg-color: #ffffff;
-    --card-color: #ffffff;
     --text-color: #333333;
-    --h1-color: #333333;
     --correct-color: #4CAF50;
     --incorrect-color: #F44336;
 }
@@ -21,46 +19,43 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
-    background: var(--card-color);
-    border-radius: 20px;
-    padding: 40px;
     width: 100%;
     max-width: 800px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 h1 {
-    color: var(--h1-color);
+    color: var(--text-color);
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
 
 #question {
-    font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: var(--text-color);
 }
 
 #options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
     margin-bottom: 1rem;
 }
 
 .option-btn {
-    display: block;
-    width: 100%;
-    color: #333333;
+    flex: 0 0 calc(50% - 12px);
+    padding: 15px;
+    font-size: 1rem;
     border: none;
     border-radius: 12px;
-    padding: 15px;
-    margin-bottom: 12px;
-    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.1s;
     font-weight: 400;
+    color: #333333;
 }
 
 .option-btn-1 { background-color: #D6F7B6; }
@@ -93,7 +88,6 @@ h1 {
     height: 24px;
     margin: 16px 0;
     font-size: 1.1rem;
-    color: var(--text-color);
     font-weight: 600;
 }
 
@@ -116,4 +110,17 @@ h1 {
 
 #next:active {
     transform: scale(0.98);
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .option-btn {
+        flex: 0 0 100%;
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    #next {
+        width: 100%;
+    }
 }
