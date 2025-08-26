@@ -15,8 +15,10 @@ body {
     background: var(--bg-color);
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
-    display: block;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 20px;
+
 }
 
 .container {
@@ -46,7 +48,7 @@ h1 {
 .option-btn {
     flex: 0 0 calc(50% - 12px);
     padding: 15px;
-    font-size: 2rem;
+    font-size: 3rem;
     border: none;
     border-radius: 12px;
     cursor: pointer;
