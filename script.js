@@ -1,38 +1,33 @@
-const questions = [
-    {
-        sentence: "Identify each electrical connector/wire with a label to record its initial position from the inboard or the outboard ______.",
-        correct: "transducer",
-        options: ["transducer", "lock nut", "support", "key tab"]
-    }
-];
-
-let current = 0;
+const question = {
+    correct: "transducer",
+    options: ["transducer", "lock nut", "support", "key tab"]
+};
 
 function disableOptions() {
-    const options = document.querySelectorAll('.option-btn');
-    options.forEach(btn => {
+    document.querySelectorAll('.option-btn').forEach(btn => {
         btn.disabled = true;
     });
 }
 
 function loadQuestion() {
-    const q = questions[current];
     const nextButton = document.getElementById("next");
-    
     nextButton.disabled = true;
-
     document.getElementById("feedback").textContent = "";
-    document.getElementById("question").innerHTML = q.sentence.replace("____", "_____");
+
+    // 顯示題目圖片
+    document.getElementById("question").innerHTML = `
+        <img src="transducer_b.png" alt="Question Image" style="max-width: 100%; height: auto;">
+    `;
+
     const optionsDiv = document.getElementById("options");
     optionsDiv.innerHTML = "";
 
-    q.options.forEach((option, index) => {
+    question.options.forEach((option, index) => {
         const btn = document.createElement("button");
         btn.textContent = option;
-        btn.classList.add("option-btn");
-        btn.classList.add("option-btn-" + (index + 1));
+        btn.className = `option-btn option-btn-${index + 1}`;
         btn.onclick = () => {
-            if (option === q.correct) {
+            if (option === question.correct) {
                 btn.classList.add("correct");
                 document.getElementById("feedback").textContent = "✅ Correct!";
                 disableOptions();
@@ -48,10 +43,9 @@ function loadQuestion() {
 }
 
 document.getElementById("next").onclick = () => {
-    // When "Next" is clicked, clear the container and show an image.
-    const container = document.querySelector('.container');
-    // Replace "path/to/your/image.png" with the correct path to your image file.
-    container.innerHTML = '<img src="transducer.png" alt="Congratulations" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">';
+    document.querySelector('.container').innerHTML = `
+        <img src="transducer_a.png" alt="Congratulations" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+    `;
 };
 
 loadQuestion();
