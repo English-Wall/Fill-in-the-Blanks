@@ -34,7 +34,10 @@ function loadQuestion() {
                 disableOptions();
                 nextButton.disabled = false;
                 nextButton.style.display = "block";
-                nextButton.style.margin = "0 auto"; // Centers the button horizontally
+                nextButton.style.margin = "0 auto"; 
+                document.getElementById("question").innerHTML = `
+                    <img src="answer.png" alt="Answer Image" style="max-width: 100%; height: auto;">
+                 `;
             } else {
                 btn.classList.add("incorrect");
                 document.getElementById("feedback").textContent = "❌ Wrong. Try again.";
