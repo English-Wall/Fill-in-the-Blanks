@@ -17,7 +17,7 @@ function loadQuestion() {
 
     // Display question image
     document.getElementById("question").innerHTML = `
-        <img src="transducer_b.png" alt="Question Image" style="max-width: 100%; height: auto;">
+        <img src="question.png" alt="Question Image" style="max-width: 100%; height: auto;">
     `;
 
     const optionsDiv = document.getElementById("options");
