@@ -46,14 +46,14 @@ h1 {
 }
 
 .option-btn {
-    flex: 0 0 calc(50% - 12px);
-    padding: 15px;
+    flex: 0 0 calc(50% - 10px);
+    padding: 12px;
     font-size: 1.5rem;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.1s;
-    font-weight: 400;
+    font-weight: 350;
     color: #333333;
 }
 
