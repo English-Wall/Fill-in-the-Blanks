@@ -1,6 +1,6 @@
 const question = {
-    correct: "transducer",
-    options: ["transducer", "lock nut", "support", "key tab"]
+    correct: "bubbles",
+    options: ["particles", "bubbles", "droplets", "blisters"]
 };
 
 function disableOptions() {
