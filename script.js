@@ -50,8 +50,8 @@ function loadQuestion() {
 
 document.getElementById("next").onclick = () => {
     // Replace 'YOUR_GOOGLE_SITES_URL' with the actual URL of the page where you embedded the Google Form.
-    window.open('https://script.google.com/macros/s/AKfycbz0rGKd05Jp06lKRQnGDxKF-EQRlUvXVUE-MH3OeKkpKvlNT07SkfGQznTYw4UHBxxntg/exec', '_blank');
-    //window.location.href = 'https://script.google.com/macros/s/AKfycbz0rGKd05Jp06lKRQnGDxKF-EQRlUvXVUE-MH3OeKkpKvlNT07SkfGQznTYw4UHBxxntg/exec';
+    window.open('https://script.google.com/macros/s/AKfycbxzZz9ax_VSA2TFG0PNebQU9_I_XRj9-g0uKQHnPAptzZILXi3F227Or7G476F-F12flQ/exec', '_blank');
+    //window.location.href = 'https://script.google.com/macros/s/AKfycbxzZz9ax_VSA2TFG0PNebQU9_I_XRj9-g0uKQHnPAptzZILXi3F227Or7G476F-F12flQ/exec';
 };
 
 loadQuestion();
