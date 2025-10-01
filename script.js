@@ -1,6 +1,6 @@
 const question = {
   correct: "bubbles",
-  options: ["particles", "bubbles", "blisters", "drops"]
+  options: ["particles", "bubbles", "blisters"]
 };
 
 function disableOptions() {
