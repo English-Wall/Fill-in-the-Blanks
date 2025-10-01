@@ -139,8 +139,7 @@ h1 {
 /* --- 手機版響應式設計 --- */
 @media (max-width: 600px) {
   .option-btn {
-    /* 這裡就是修改的重點！*/
-    flex: 0 0 calc(50% - 10px);
+    flex: 0 0 100%;
     font-size: 1rem;
     padding: 12px;
   }
