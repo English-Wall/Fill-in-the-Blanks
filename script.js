@@ -67,7 +67,7 @@ document.getElementById("submit").onclick = () => {
     return;
   }
 
- status.textContent = "Submitting...";
+ status.textContent = "⏳Submitting...";
   document.getElementById("submit").disabled = true; // 先禁用按鈕防止重複提交
 
   fetch("https://script.google.com/macros/s/AKfycbxN_QRhW6F7ogSh_twhLlfMZNbSyGlzip3AmhiWHt1wJ0It4fReU53RJ5Ub5w_nWTLE/exec", {
